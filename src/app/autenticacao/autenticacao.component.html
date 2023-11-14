@@ -1,0 +1,8 @@
+<h1>Injeção de serviço de Autenticação do Usuário</h1>
+
+<p>{{message}}</p>
+
+<!-- Se o usuario está altenticado aparece botao de deslogar, se não aparece o botão de logar -->
+
+<button *ngIf="!usuarioAutenticado" (click)="autenticarUsuario()">Logar</button>
+<button *ngIf="usuarioAutenticado" (click)="desautenticarUsuario()">Deslogar</button>
